@@ -9,12 +9,12 @@ marker_size = 200  # Size of the marker image in pixels
 
 # Generate the marker
 marker_image = np.zeros((marker_size, marker_size), dtype=np.uint8)
-marker_image = aruco.drawMarker(aruco_dict, marker_id, marker_size)
+marker_image = aruco.generateImageMarker(aruco_dict, marker_id, marker_size)
 
-# Display the marker
-cv2.imshow('ArUco Marker', marker_image)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+# # Display the marker
+# cv2.imshow('ArUco Marker', marker_image)
+# cv2.waitKey(0)
+# cv2.destroyAllWindows()
 
 # Optionally, save the marker as an image file
-cv2.imwrite(f'aruco_marker_{marker_id}.png', marker_image)
+cv2.imwrite(f'aruco_marker_{marker_id}.jpg', marker_image)
