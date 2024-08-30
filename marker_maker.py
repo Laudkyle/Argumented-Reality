@@ -3,7 +3,7 @@ import numpy as np
 import cv2.aruco as aruco
 
 # Define the dictionary and the ID of the marker
-aruco_dict = aruco.Dictionary_get(aruco.DICT_6X6_250)
+aruco_dict = aruco.getPredefinedDictionary(aruco.DICT_4X4_250)
 marker_id = 42  # ID of the marker you want to generate
 marker_size = 200  # Size of the marker image in pixels
 
